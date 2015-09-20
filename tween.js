@@ -3,7 +3,11 @@
 //------------------------------
 
 Tween = (function() {
-
+  if (!Date.now) {
+        Date.now = function now() {
+            return new Date().getTime();
+        };
+    }
   //------------------------------
   // Constants
   //------------------------------
@@ -57,8 +61,8 @@ Tween = (function() {
   }
 
   
-  function now() {
-    return  new Date().getTime();
+function now() {
+    return  Date.now();
   }
 
   //------------------------------
