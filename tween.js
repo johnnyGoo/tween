@@ -56,8 +56,9 @@ Tween = (function() {
     return result;
   }
 
+  
   function now() {
-    return performance.now();
+    return  new Date().getTime();
   }
 
   //------------------------------
